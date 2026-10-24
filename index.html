@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projekt AI</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --panel-2: #1f2937;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #4cc9f0;
+      --accent-2: #7b2cbf;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #09090e 0%, #1a1a2e 100%);
+      color: var(--text);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .wrap {
+      width: min(900px, 90vw);
+      background: rgba(17, 24, 39, 0.8);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      background: linear-gradient(45deg, #7b2cbf, #4cc9f0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(76, 201, 240, 0.7);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Projekt AI</h1>
+    <p>To jest punkt wejścia do prezentacji i instrukcji przygotowanych w ramach projektu dotyczącego generacji wideo oraz awatarów AI.</p>
+
+    <div class="grid">
+      <article class="card">
+        <h2>Prezentacja główna</h2>
+        <p>Omówienie generatorów wideo, awatarów AI i technologii TTS.</p>
+        <a href="Prezentacja_Awatary_AI.html">Otwórz prezentację</a>
+      </article>
+
+      <article class="card">
+        <h2>Instrukcja VisionStory</h2>
+        <p>Krótki przewodnik krok po kroku dotyczący zakładania konta i pracy z platformą.</p>
+        <a href="Instrukcje/VisionStory.html">Otwórz instrukcję</a>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

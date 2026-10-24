@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generatory wideo i awatary AI</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #121212; 
+            color: #ffffff; 
+            overflow: hidden; 
+        }
+        .slider { 
+            position: relative; 
+            width: 100vw; 
+            height: 100vh; 
+        }
+        .slide { 
+            position: absolute; 
+            top: 0; left: 0; 
+            width: 100%; height: 100%; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            opacity: 0; 
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease; 
+            pointer-events: none; 
+            padding: 4rem; 
+            box-sizing: border-box; 
+            transform: scale(0.95);
+        }
+        .slide.active { 
+            opacity: 1; 
+            pointer-events: auto; 
+            transform: scale(1);
+        }
+        h1 { 
+            color: #4facfe; 
+            font-size: 4rem; 
+            text-align: center; 
+            margin-bottom: 1rem; 
+            text-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+        }
+        h2 { 
+            color: #00f2fe; 
+            font-size: 3rem; 
+            margin-bottom: 2rem; 
+            width: 100%;
+            max-width: 1000px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        p, li { 
+            font-size: 1.6rem; 
+            line-height: 1.8; 
+            max-width: 1000px; 
+            color: #e0e0e0;
+        }
+        ul { 
+            max-width: 1000px; 
+            margin-bottom: 20px; 
+            width: 100%;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        .controls { 
+            position: absolute; 
+            bottom: 40px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            display: flex; 
+            gap: 20px; 
+            z-index: 100; 
+        }
+        button { 
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); 
+            border: none; 
+            padding: 12px 30px; 
+            color: white; 
+            font-size: 1.2rem; 
+            cursor: pointer; 
+            border-radius: 25px; 
+            font-weight: bold; 
+            transition: transform 0.2s, box-shadow 0.2s; 
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+        }
+        button:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.5);
+        }
+        button:disabled { 
+            background: #444; 
+            color: #777;
+            box-shadow: none;
+            cursor: not-allowed; 
+            transform: none;
+        }
+        table { 
+            border-collapse: collapse; 
+            width: 100%; 
+            max-width: 1000px; 
+            margin-top: 20px; 
+            background: #1e1e1e; 
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td { 
+            padding: 20px; 
+            text-align: left; 
+            font-size: 1.4rem; 
+        }
+        th { 
+            background-color: #2a2a2a; 
+            color: #4facfe; 
+            font-weight: bold;
+            border-bottom: 2px solid #00f2fe;
+        }
+        td {
+            border-bottom: 1px solid #333;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .footer { 
+            position: absolute; 
+            bottom: 20px; 
+            right: 30px; 
+            font-size: 1.2rem; 
+            color: #666; 
+        }
+        .highlight { 
+            color: #00f2fe; 
+            font-weight: bold; 
+        }
+        .badge {
+            background-color: #333;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider">
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <div class="badge">Projekt na ćwiczenia
+        </div>
+        <h1>Generatory wideo i awatary AI</h1>
+        <p style="text-align: center; font-size: 2rem;">Nowa era tworzenia i automatyzacji treści wizualnych</p>
+        <p style="text-align: center; color: #888; font-size: 1.2rem; margin-top: 40px;">Użyj strzałek na klawiaturze lub przycisków na dole, aby zmieniać slajdy</p>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h2>1. Wstęp: Teoria i technologia</h2>
+        <ul>
+            <li><span class="highlight">Text-to-Speech (TTS):</span> Zaawansowane generowanie realistycznego głosu z tekstu przy użyciu głębokich sieci neuronowych.</li>
+            <li><span class="highlight">Lip-sync (Synchronizacja):</span> Algorytmy idealnie dopasowujące ruchy mięśni twarzy i warg awatara do wypowiadanych głosek.</li>
+            <li><span class="highlight">Zastosowanie praktyczne:</span> Tworzenie szkoleń e-learningowych, zautomatyzowana obsługa klienta, bezstratne tłumaczenie wideo na 50+ języków z zachowaniem barwy głosu twórcy.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h2>2. Przykładowe narzędzia: HeyGen</h2>
+        <ul>
+            <li><span class="highlight">Budowa i działanie:</span> Platforma cloudowa do zmiany tekstu w wideo. Umożliwia klonowanie własnego wizerunku i głosu.</li>
+            <li><span class="highlight">Zalety:</span> Niezwykle realistyczna mimika twarzy (mikrowyrazy), perfekcyjne tłumaczenie wideo (Video Translate).</li>
+            <li><span class="highlight">Wady:</span> Bardzo restrykcyjne limity darmowe (tylko 1 darmowy kredyt/wideo próbne), wysokie koszty abonamentu po okresie testowym.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h2>2. Przykładowe narzędzia: Synthesia</h2>
+        <ul>
+            <li><span class="highlight">Budowa i działanie:</span> Pionierskie narzędzie B2B, skupiające się na korporacyjnych materiałach szkoleniowych.</li>
+            <li><span class="highlight">Zalety:</span> Ogromna baza gotowych, profesjonalnych awatarów "biznesowych", wysoka stabilność i rygorystyczne zasady bezpieczeństwa (etyka AI).</li>
+            <li><span class="highlight">Wady:</span> Awatary mogą wydawać się nieco "sztywne" w porównaniu do nowszej konkurencji; brak darmowego planu z prawdziwego zdarzenia.</li>
+        </ul>
+    </div>
+    
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h2>2. Przykładowe narzędzia: D-ID</h2>
+        <ul>
+            <li><span class="highlight">Budowa i działanie:</span> Aplikacja oparta na ożywianiu statycznych obrazów i twarzy za pomocą AI (Creative Reality™ Studio).</li>
+            <li><span class="highlight">Zalety:</span> Możliwość animacji dosłownie każdej twarzy z 1 zdjęcia (np. postacie historyczne, obrazy, wygenerowane postacie 2D). Prosty interfejs zintegrowany z np. Canvą.</li>
+            <li><span class="highlight">Wady:</span> Wyraźny "efekt doliny niesamowitości" (uncanny valley) - nienaturalne ruchy głowy przy dłuższych materiałach wideo.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h2>3. Porównanie narzędzi</h2>
+        <table>
+            <tr>
+                <th>Narzędzie</th>
+                <th>Jakość i mimika</th>
+                <th>Główne zastosowanie</th>
+                <th>Cena (najtańszy plan)</th>
+            </tr>
+            <tr>
+                <td><strong>HeyGen</strong></td>
+                <td>Najwyższa (naturalne mikrowyrazy)</td>
+                <td>Marketing, Tłumaczenia, Social Media</td>
+                <td>Od ok. $29/msc</td>
+            </tr>
+            <tr>
+                <td><strong>Synthesia</strong></td>
+                <td>Bardzo dobra (postawa formalna)</td>
+                <td>Korporacje, Edukacja, HR</td>
+                <td>Od ok. $22/msc</td>
+            </tr>
+            <tr>
+                <td><strong>D-ID</strong></td>
+                <td>Średnia (animacja ze zdjęcia)</td>
+                <td>Rozrywka, Sztuka, Hobby, Social Media</td>
+                <td>Od ok. $5.90/msc</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <h2>4. Aktywność dla grupy </h2>
+        <p style="text-align: center; font-size: 2.5rem; margin: 40px 0;"><span class="highlight">Jak łatwo dziś stworzyć swojego awatera/nagranie z cudzą</span></p>
+        <ul>
+            <li>Tworzenie krótkich nagrań audio za pomocą własnego nagrania dźwiękowego/wprowadzonego tekstu</li>
+            <!-- <li><a href="\Instrukcje\VisionStory.html">aaa</a></li> -->
+<p style="text-align: center; font-size: 2rem; margin-top: 40px;">
+  <span class="highlight">
+    <a href="Instrukcje/VisionStory.html">
+      INSTRUKCJA TWORZENIA NAGRANIA W VisionStory
+    </a>
+  </span>
+</p>
+        </ul>
+        <!-- <p style="text-align: center; color: #888;"><i>*Uwaga: prezenterzy przejdą teraz do odtworzenia przygotowanych nagrań testowych.</i></p> -->
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slide">
+        <h2>5. Dyskusja </h2>
+        <ul>
+            <li>Gdzie według Was leży granica między optymalizacją kosztów produkcji, a <span class="highlight">etyką i bezpieczeństwem</span> (zagrożenie deepfake, kradzież wizerunku i głosu)?</li>
+            <li style="margin-top: 20px;">Czy sądzicie, że awatary AI całkowicie zastąpią prezenterów telewizyjnych i aktorów w reklamach w ciągu najbliższych 5 lat?</li>
+        </ul>
+        <!-- <p style="text-align: center; font-size: 2rem; margin-top: 40px;"><span class="highlight">Zapraszamy do zadawania pytań!</span></p> -->
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="slide">
+        <h2>6. Informacje organizacyjne </h2>
+        <ul>
+            <li><span class="highlight">Bibliografia / Źródła:</span> 
+                <br>- Dokumentacja techniczna: heygen.com, synthesia.io, d-id.com
+                <br>- Artykuły branżowe nt. zjawiska "Uncanny Valley" w grafice komputerowej
+            </li>
+            <li style="margin-top: 20px;"><span class="highlight">Transparentność AI:</span> 
+                <br>Oświadczamy, że podczas przygotowywania struktury, kodu materiałów oraz opracowywania treści merytorycznej niniejszej prezentacji wykorzystano duże modele językowe w celach badawczych i redakcyjnych.
+            </li>
+        </ul>
+        <p style="text-align: center; color: #4facfe; margin-top: 60px; font-size: 2.5rem; font-weight: bold;">Dziękujemy za uwagę!</p>
+    </div>
+</div>
+
+<div class="controls">
+    <!-- <button id="prevBtn" onclick="changeSlide(-1)" disabled>◄ Poprzedni</button> -->
+    <!-- <button id="nextBtn" onclick="changeSlide(1)">Następny ►</button>l -->
+</div>
+
+<!-- <div class="footer">Slajd <span id="currentSlideNum">1</span> / 9</div> -->
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const slideNumDisplay = document.getElementById('currentSlideNum');
+
+    function changeSlide(direction) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide += direction;
+        slides[currentSlide].classList.add('active');
+        
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === slides.length - 1;
+        slideNumDisplay.innerText = currentSlide + 1;
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' && currentSlide < slides.length - 1) changeSlide(1);
+        if (e.key === 'ArrowLeft' && currentSlide > 0) changeSlide(-1);
+    });
+</script>
+</body>
+</html>

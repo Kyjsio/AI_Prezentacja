@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>VisionStory - Co to jest i jak zacząć?</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css" id="theme">
+
+    <!-- Własne style CSS dla nowoczesnego wyglądu -->
+    <style>
+        /* Globalne nadpisanie tła na elegancki gradient */
+/* Globalne nadpisanie tła na elegancki gradient */
+.reveal-viewport {
+    background: linear-gradient(135deg, #09090e 0%, #1a1a2e 100%) !important;
+}
+
+body {
+    color: #ffffff;
+}
+
+        /* Ustawienia typografii */
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: 'Montserrat', sans-serif !important;
+            text-transform: none !important;
+            font-weight: 800 !important;
+            margin-bottom: 20px;
+        }
+
+        .reveal p, .reveal li, .reveal div {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 300;
+        }
+
+        /* Nowoczesny gradient dla nagłówków */
+        .text-gradient {
+            background: -webkit-linear-gradient(45deg, #7b2cbf, #4cc9f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .text-gradient-green {
+            background: -webkit-linear-gradient(45deg, #06d6a0, #118ab2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* Stylowanie list */
+        .reveal ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reveal ul li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .reveal ul li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Pudełka akcentujące (karty) */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .glass-card a {
+            color: #4cc9f0 !important;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .glass-card a:hover {
+            color: #7b2cbf !important;
+        }
+
+        /* Akcent dla ważnych słów */
+        strong {
+            color: #4cc9f0;
+            font-weight: 600;
+        }
+
+        /* Stylizacja kroków */
+        .step-badge {
+            background: linear-gradient(45deg, #7b2cbf, #4cc9f0);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .image-frame {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            margin-top: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .image-frame img {
+            display: block;
+            width: 100%;
+            max-height: 420px;
+            object-fit: contain;
+            border-radius: 12px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- SLAJD 1: Tytuł -->
+            <section class="center">
+                <h1 class="text-gradient">VisionStory</h1>
+                <h3>Co to jest i jak zacząć?</h3>
+                <p style="margin-top: 40px; opacity: 0.7; font-size: 1rem;">
+                    Przewodnik po platformie AI do tworzenia wideo<br>
+                    <!-- <small>Naciśnij spację lub strzałkę w prawo, aby kontynuować</small> -->
+                </p>
+            </section>
+
+            <!-- SLAJD 2: Czym jest VisionStory? -->
+            <section>
+                <h2 class="text-gradient">Czym jest VisionStory?</h2>
+                <p style="font-size: 1.4rem; margin-bottom: 40px;">
+                    Innowacyjna platforma AI do <strong>błyskawicznego tworzenia wideo</strong>. Pozwala tworzyć profesjonalne materiały bez kamery i studia.
+                </p>
+                <ul style="font-size: 1.3rem;">
+                    <li class="fragment fade-up">Realistyczne awatary (prezenterzy wideo)</li>
+                    <li class="fragment fade-up">Naturalne generowanie głosu z tekstu (Text-to-Speech)</li>
+                    <!-- <li class="fragment fade-up">Zaawansowana zamiana twarzy (Face Swap)</li> -->
+                </ul>
+            </section>
+
+            <!-- SLAJD 3: Główne funkcje -->
+            <!-- <section>
+                <h2 class="text-gradient">Główne funkcje</h2>
+                <div class="glass-card" style="text-align: left; max-width: 800px; margin: 0 auto;">
+                    <ul>
+                        <li class="fragment fade-right">Wsparcie dla <strong>88 języków</strong> z całego świata</li>
+                        <li class="fragment fade-right">Katalog ponad <strong>1000 naturalnych głosów</strong></li>
+                        <li class="fragment fade-right">Zautomatyzowane tworzenie <strong>wideo podcastów</strong></li>
+                        <li class="fragment fade-right">Tworzenie teledysków z idealną <strong>synchronizacją ruchu warg (lip sync)</strong></li>
+                        <li class="fragment fade-right">Innowacyjny i zaawansowany model <strong>V-Character</strong></li>
+                    </ul>
+                </div>
+            </section> -->
+
+            <!-- SLAJD 4: Instrukcja (Title slide) -->
+            <section class="center">
+                <h2 class="text-gradient-green">Instrukcja</h2>
+                <h3>Jak założyć konto w VisionStory?</h3>
+                <p style="font-size: 1.2rem; opacity: 0.8; margin-top: 30px;">
+                    Przygotowaliśmy krótki proces krok po kroku, który pozwoli Ci rozpocząć przygodę z generowaniem wideo.
+                </p>
+            </section>
+
+            <!-- SLAJD 5: Krok 1 -->
+            <section>
+                <div class="step-badge">Krok 1</div>
+                <h2>Odwiedź stronę</h2>
+                <p style="font-size: 1.3rem;">Otwórz swoją ulubioną przeglądarkę i przejdź pod jeden z poniższych adresów:</p>
+                
+                <div class="glass-card" style="font-size: 1.5rem; margin-top: 40px; text-align: center;">
+                    <!-- <a href="https://visionstory.ai" target="_blank">visionstory.ai</a>
+                    <div style="font-size: 1rem; color: #aaa; margin: 15px 0;">— lub bezpośrednio do panelu —</div> -->
+                    <a href="https://app.visionstory.ai/login" target="_blank">app.visionstory.ai/login</a>
+                </div>
+            </section>
+
+            <!-- SLAJD 6: Krok 2 -->
+            <section>
+                <div class="step-badge">Krok 2</div>
+                <h2>Rejestracja</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 40px;">Proces logowania jest szybki i intuicyjny:</p>
+                
+                <ul>
+                    <!-- <li class="fragment fade-up">
+                        Znajdź na stronie i kliknij przycisk <br>
+                        <span style="background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 8px; color: #4cc9f0; display: inline-block; margin-top: 10px;">"Rozpocznij ZA DARMO"</span> lub <span style="background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 8px; color: #4cc9f0; display: inline-block; margin-top: 10px;">"Wypróbuj za darmo"</span>.
+                    </li> -->
+                    <li class="fragment fade-up" style="margin-top: 30px;">
+                        Wybierz preferowaną metodę logowania, na przykład korzystając ze swojego <strong>konta Google</strong> tak jak jest prezentowane w dalszej części.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SLAJD 7: Zdjêcie z interfejsu -->
+            <section class="center">
+                <div class="step-badge">Krok 3</div>
+                <h2>Wybór awatara i sceny</h2>
+                <div class="image-frame">
+                    <img src="../images/visionstory_main.png" alt="Interfejs VisionStory z awatarem i ustawieniami nagrania" />
+                </div>
+                <p class="fragment fade-up" style="margin-top: 20px; font-size: 1.1rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+                    Na tym ekranie widzisz główne elementy pracy w VisionStory: wybór awatara, sceny i opcji generowania nagrania.
+                </p>
+            </section>
+
+            <!-- SLAJD 8: Jak zrobić awatara -->
+            <section>
+                <div class="step-badge">Awatar</div>
+                <h2>Jak przygotować awatara?</h2>
+                <div class="image-frame fragment fade-up">
+                    <img src="../images/visionstory_wskazane_main.png" alt="Wskazany interfejs VisionStory do wyboru awatara" />
+                </div>
+            </section>
+
+            <!-- SLAJD 9: Jak nagrać -->
+            <section>
+                <div class="step-badge">Nagranie</div>
+                <h2>Jak dodać głos i wygenerować wideo?</h2>
+                <div class="image-frame fragment fade-up">
+                    <img src="../images/visionstory_wskazane_main2.png" alt="Wskazany interfejs VisionStory do wpisywania tekstu i generowania głosu" />
+                </div>
+                
+            </section>
+
+            <!-- SLAJD 10: Podsumowanie -->
+            <section class="center">
+                <div class="step-badge">Gotowe</div>
+                <h2>Awatar + tekst + głos = gotowy materiał wideo</h2>
+                <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">
+                    Po połączeniu odpowiedniego awatara, sceny i nagrania możesz szybko tworzyć profesjonalne filmy bez potrzeby kamery czy studia.
+                </p>
+                <h3 class="text-gradient-green fragment fade-in" style="margin-top: 50px;">Możesz publikować, udostępniać i eksportować wideo!</h3>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        // Inicjalizacja biblioteki Reveal.js
+        Reveal.initialize({
+            hash: true,          // Pozwala na odświeżanie strony i zachowanie aktualnego slajdu
+            transition: 'slide', // Styl przejścia (none/fade/slide/convex/concave/zoom)
+            controls: true,      // Pokaż strzałki sterujące
+            progress: true,      // Pokaż pasek postępu na dole
+            center: false,       // Centruj każdy slajd - ustawione na false, aby nadpisywać to klasą .center w HTML
+            margin: 0.1,         // Margines wokół slajdów
+        });
+    </script>
+
+</body>
+</html>
