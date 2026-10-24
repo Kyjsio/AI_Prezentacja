@@ -10,7 +10,7 @@ Ten folder zawiera dwa proste projekty prezentacyjne utworzone w HTML/CSS/JS:
 Najprościej uruchomić lokalny serwer w katalogu projektu i otworzyć stronę w przeglądarce:
 
 ```bash
-cd "c:/Users/DinoK/OneDrive/Pulpit/Studia/Projekt_AI"
+cd "ściezka gdzie jest"
 python -m http.server 8000
 ```
 
@@ -33,6 +33,3 @@ Projekt_AI/
     └── VisionStory.html
 ```
 
-## Uwagi
-
-Projekty są statyczne, więc nie wymagają instalacji dodatkowych zależności. Wystarczy otworzyć pliki w przeglądarce lub uruchomić prosty serwer.
