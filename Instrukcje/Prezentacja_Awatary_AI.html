@@ -99,6 +99,23 @@
             cursor: not-allowed; 
             transform: none;
         }
+        .return-link {
+            position: absolute;
+            bottom: 40px;
+            padding: 12px 30px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .return-link:hover, .return-link:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.5);
+        }
         table { 
             border-collapse: collapse; 
             width: 100%; 
@@ -269,7 +286,8 @@
                 <br>Oświadczamy, że podczas przygotowywania struktury, kodu materiałów oraz opracowywania treści merytorycznej niniejszej prezentacji wykorzystano duże modele językowe w celach badawczych i redakcyjnych.
             </li>
         </ul>
-        <p style="text-align: center; color: #4facfe; margin-top: 60px; font-size: 2.5rem; font-weight: bold;">Dziękujemy za uwagę!</p>
+        <!-- <p style="text-align: center; color: #4facfe; margin-top: 60px; font-size: 2.5rem; font-weight: bold;">Dziękujemy za uwagę!</p> -->
+        <a class="return-link" href="../index.html">Powrót do strony głównej</a>
     </div>
 </div>
 
